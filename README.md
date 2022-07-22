@@ -4,6 +4,7 @@ The purpose of this thesis is to design a device for recording and analysing aud
 Arduino.ino (Arduino platform)
 
 Record and send data from microphones to pc responsible for performing operations via serial communication.
+
 Convert.c   (Raspberry Pi platform)
 
 Record and write data from microphones to .txt file
