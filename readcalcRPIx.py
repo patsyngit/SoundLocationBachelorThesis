@@ -42,14 +42,14 @@ t3=(ch0[range].size-I3-1)*dt
 
 #a=math.sqrt(30*30+80*80);
 #t1theory=(math.sqrt(30*30+100*100)-a)/vs; t2theory=(math.sqrt(30*30+120*120)-a)/vs; t3theory=(math.sqrt(50*50+80*80)-a)/vs;
-a=math.sqrt(0*0+60*60);
-t1theory=(math.sqrt(0*0+80*80)-a)/vs; t2theory=(math.sqrt(0*0+100*100)-a)/vs; t3theory=(math.sqrt(20*20+60*60)-a)/vs;
+#a=math.sqrt(0*0+60*60);
+#t1theory=(math.sqrt(0*0+80*80)-a)/vs; t2theory=(math.sqrt(0*0+100*100)-a)/vs; t3theory=(math.sqrt(20*20+60*60)-a)/vs;
 #a=math.sqrt(30*30+40*40);
 #t1theory=(math.sqrt(30*30+60*60)-a)/vs; t2theory=(math.sqrt(30*30+80*80)-a)/vs; t3theory=(math.sqrt(50*50+40*40)-a)/vs;
 #a=math.sqrt(60*60+40*40);
 #t1theory=(math.sqrt(60*60+60*60)-a)/vs; t2theory=(math.sqrt(60*60+80*80)-a)/vs; t3theory=(math.sqrt(80*80+40*40)-a)/vs;
-#a=math.sqrt(30*30+20*20);
-#t1theory=(math.sqrt(30*30+0*0)-a)/vs; t2theory=(math.sqrt(30*30+20*20)-a)/vs; t3theory=(math.sqrt(50*50+20*20)-a)/vs;
+a=math.sqrt(30*30+20*20);
+t1theory=(math.sqrt(30*30+0*0)-a)/vs; t2theory=(math.sqrt(30*30+20*20)-a)/vs; t3theory=(math.sqrt(50*50+20*20)-a)/vs;
 
 print("\nt1= %e" % t1," t1peak= %e" % t1peak," t1theory= %e" % t1theory)
 print("\nt2= %e" % t2," t2peak= %e" % t2peak," t2theory= %e" % t2theory)
