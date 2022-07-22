@@ -35,6 +35,7 @@
     Tsig=1/fsig;
     Ti=Tsig/dt;
     t=0:dt:(length(ch0)-1)*dt;
+%Wyznacz opóźnienia metodą amplitud maksymalnych    
     [M,Ich0] = max(ch0);
 %Zapisz indeks elementu wektora ch0, który przyjmuje wartość maksymalną pod zmienną Ich0.
     [M,Ich1] = max(ch1);
@@ -42,13 +43,13 @@
     [M,Ich2] = max(ch2);
 %Zapisz indeks elementu wektora ch0, który przyjmuje wartość maksymalną pod zmienną Ich0.
     [M,Ich3] = max(ch3);
-    
     seq=sort([Ich3 Ich2 Ich1 Ich0]);
 %Wyznacz wartości opóźnienia pomiędzy sygnałami z mikrofonów i mikrofonu referencyjnego
     peakt1=(Ich1-Ich0)*dt;
     peakt2=(Ich2-Ich0)*dt;
     peakt3=(Ich3-Ich0)*dt;
     
+%Wyznacz opóźnienia metodą korelacji wzajemnej syngałów
 %Posortuj rosnąco indeksy, dla których napięcia z poszególnych mikrofonów przyjmują maksimum.
     sortUp=sort([Ich3 Ich2 Ich1 Ich0]);
 %Określ przedział zawierający zarejestrowaną falę akusytczną. Zapobiegnie to niepotrzebnemu korelowaniu szumów.
@@ -72,7 +73,7 @@
     x1=0;   y1=-20; %Współrzędne mikrofonu 1
     x2=0;   y2=-40; %Współrzędne mikrofonu 2
     x3=20;  y3=0;   %Współrzędne mikrofonu 3
-    
+%Wyznacz położenie na podstawie opóźnień wyznaczonych metodą amplitud maksymalnych    
     peakd1=peakt1*vs;     %Wyznaczenie wartości delta_1, zgodnie z równaniem (5).
     peakd2=peakt2*vs;     %Wyznaczenie wartości delta_2, zgodnie z równaniem (5).
     peakd3=peakt3*vs;     %Wyznaczenie wartości delta_3, zgodnie z równaniem (5).
@@ -85,6 +86,7 @@
     peakr0=B/(G*B-F*C)*(H-F*D/B+peakx*(F*A/B-E));
     peaky=1/B*(D-C*peakr0-A*peakx);
     
+%Wyznacz położenie na podstawie opóźnień wyznaczonych metodą  korelacji wzajemnej syngałów
 %Wyznaczenie współrzędnych x i y źródła dźwięku oraz jego odległości od początku układu współrzędnych - r0
     corrd1=corrt1*vs;     %Wyznaczenie wartości delta_1, zgodnie z równaniem (5).
     corrd2=corrt2*vs;     %Wyznaczenie wartości delta_2, zgodnie z równaniem (5).
