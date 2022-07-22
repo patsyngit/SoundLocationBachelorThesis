@@ -10,4 +10,5 @@ The purpose of this thesis is to design a device for recording and analysing aud
  Read data from .txt file, truncate it, and perform calculations to determine delays between signals from microphones.  
 * RPIRecordAndWrite.c (Raspberry Pi platform):  
  Record and write data from microphones to .txt file  
-* raspberry_12_5k_klasniecie3020.txt - example file of recorded data to use with RPIDataCalcFull.py and RPIDataCalcTruncated.py  
+* raspberry_12_5k_klasniecie3020.txt  
+Example file of recorded data to use with RPIDataCalcFull.py and RPIDataCalcTruncated.py  
