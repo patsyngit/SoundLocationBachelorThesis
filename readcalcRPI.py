@@ -6,12 +6,10 @@ import math
 dt=80/1000000
 vs=34300
 
-file = open("raspberry_12_5k_klasniecie0060.txt", "r")
-#file = open("heh.txt", "r")
+file = open("raspberry_12_5k_klasniecie3020.txt", "r")
 values = file.readlines()
 values =[int(i.strip()) for i in values]
 
-#values=[1,2,3,4,5,6,7,8,9,10,11,12]
 ch0=np.asarray(values[0::4])
 ch1=np.asarray(values[1::4])
 ch2=np.asarray(values[2::4])
