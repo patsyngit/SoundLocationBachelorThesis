@@ -5,7 +5,7 @@ The purpose of this thesis is to design a device for recording and analysing aud
 * MATLABReceiveAndCalc.m (PC platform)  
  Receive data from Arduino, convert it, and perform calculations to determine sound location.  
 * RPIDataCalcFull.py (Raspberry Pi platform):  
- Read data from .txt file convert it, and perform calculations to determine delays between signals from microphones.  
+ Read data from .txt file, convert it, and perform calculations to determine delays between signals from microphones.  
 * RPIDataCalcTruncated.py (Raspberry Pi platform):  
  Read data from .txt file, truncate it, and perform calculations to determine delays between signals from microphones.  
 * RPIRecordAndWrite.c (Raspberry Pi platform):  
